@@ -67,7 +67,7 @@
         color: var(--title-color);
       }
       h1 {
-        font-size: clamp(36px, 6vw, 80px);
+        font-size: clamp(36px, 6vw, 76px);
         line-height: 1.1;
         font-weight: 700;
       }
@@ -510,16 +510,23 @@
   </head>
   <body>
     <div class="page-wrapper">
-
       <!-- SLIDE 1: 커버 -->
       <div
         class="slide-container full-bg-image"
-        style="background-image: url(&quot;https://picture-search.skywork.ai/aippt/image/sheet/aaf2ae8e502d9f0ede20d9d91285fd74_zimage.jpg&quot;);"
+        style="
+          background-image: url(&quot;https://picture-search.skywork.ai/aippt/image/sheet/aaf2ae8e502d9f0ede20d9d91285fd74_zimage.jpg&quot;);
+        "
       >
         <div class="content-overlay">
           <h1>민형기 포트폴리오</h1>
           <p class="subtitle">펌웨어 / FPGA 개발자 | Min Hyeong-Gi</p>
-          <p style="margin-top: 20px; font-weight: 700; color: var(--label-color);">
+          <p
+            style="
+              margin-top: 20px;
+              font-weight: 700;
+              color: var(--label-color);
+            "
+          >
             alsgudrl132@gmail.com | 010-3020-9437
           </p>
         </div>
@@ -547,7 +554,9 @@
             </div>
             <div class="row">
               <div class="lbl">Git</div>
-              <a href="https://github.com/alsgudrl132">github.com/alsgudrl132</a>
+              <a href="https://github.com/alsgudrl132"
+                >github.com/alsgudrl132</a
+              >
             </div>
           </div>
         </div>
@@ -577,11 +586,17 @@
               <div class="s2-line"></div>
               <div class="s2-item">
                 <div class="s2-period">2024.08~2024.12</div>
-                <div class="s2-desc">EBS 온라인클래스 프론트엔드 유지보수 (프리랜서)</div>
+                <div class="s2-desc">
+                  EBS 온라인클래스 프론트엔드 유지보수 (프리랜서)
+                </div>
               </div>
               <div class="s2-item">
                 <div class="s2-period">2025.10~2026.03</div>
-                <div class="s2-desc">디앤샤인 비상벨 음성인식 웹 제어 도구 개발 - Next.js + Node.js + Express 기반 - STM32C0 기반 펌웨어 개발 병행 - 하드웨어 개발자와 협업 진행</div>
+                <div class="s2-desc">
+                  디앤샤인 비상벨 음성인식 웹 제어 도구 개발 - Next.js + Node.js
+                  + Express 기반 - STM32C0 기반 펌웨어 개발 병행 - 하드웨어
+                  개발자와 협업 진행
+                </div>
               </div>
             </div>
             <div class="s2-section">
@@ -589,7 +604,9 @@
               <div class="s2-line"></div>
               <div class="s2-item">
                 <div class="s2-period">2023.03~2023.09</div>
-                <div class="s2-desc">자바 풀스택 &amp; 빅데이터 융합 개발자</div>
+                <div class="s2-desc">
+                  자바 풀스택 &amp; 빅데이터 융합 개발자
+                </div>
               </div>
               <div class="s2-item">
                 <div class="s2-period">2025.05~2025.10</div>
@@ -603,9 +620,16 @@
 
       <!-- SLIDE 3: AGRO_DRY 소개 -->
       <div class="slide-container bleed-image-layout">
-        <div class="content-container" style="background-color: var(--label-color)">
-          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">AGRO_DRY</h2>
-          <h3 style="color: #fff; opacity: 0.9">STM32 기반 환경 제어 시스템 (개인)</h3>
+        <div
+          class="content-container"
+          style="background-color: var(--label-color)"
+        >
+          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">
+            AGRO_DRY
+          </h2>
+          <h3 style="color: #fff; opacity: 0.9">
+            STM32 기반 환경 제어 시스템 (개인)
+          </h3>
           <p style="color: #fff; margin-bottom: 30px">
             가금류 육추기(Poultry Brooder)용 임베디드 온도, 습도 자동 제어
             시스템입니다. STM32F411RE Nucleo 보드로 DHT22 센서를 읽고 릴레이로
@@ -615,7 +639,9 @@
           <ul class="styled-list">
             <li style="color: #fff">STM32F411RE, C (HAL), I2C, IWDG</li>
             <li style="color: #fff">DHT22 온습도 센서 + 릴레이 제어</li>
-            <li style="color: #fff">16×2 LCD 상태 표시, 버튼 UI로 목표 온도 설정</li>
+            <li style="color: #fff">
+              16×2 LCD 상태 표시, 버튼 UI로 목표 온도 설정
+            </li>
           </ul>
           <div class="github-card">
             <div class="qr-side">
@@ -635,7 +661,12 @@
         </div>
         <div
           class="image-container"
-          style="background: #f7f4ee; display: grid; grid-template-rows: 1fr 1fr; gap: 0;"
+          style="
+            background: #f7f4ee;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 0;
+          "
         >
           <img
             alt="가금류 육추기 운용 중"
@@ -657,7 +688,9 @@
         <div class="content-area">
           <div class="tiled-text-icons">
             <div class="icon-tile">
-              <div class="icon"><i class="fa-solid fa-temperature-half"></i></div>
+              <div class="icon">
+                <i class="fa-solid fa-temperature-half"></i>
+              </div>
               <h3>온도 제어 로직</h3>
               <p>
                 DHT22로 온습도 실시간 측정. 히스테리시스 방식으로 목표 온도 ±2°C
@@ -687,17 +720,28 @@
 
       <!-- SLIDE 5: RC카 소개 -->
       <div class="slide-container bleed-image-layout">
-        <div class="content-container" style="background-color: var(--label-color)">
-          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">RC카 자율주행 프로젝트</h2>
-          <h3 style="color: #fff; opacity: 0.9">STM32 + FreeRTOS 기반 팀 프로젝트</h3>
+        <div
+          class="content-container"
+          style="background-color: var(--label-color)"
+        >
+          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">
+            RC카 자율주행 프로젝트
+          </h2>
+          <h3 style="color: #fff; opacity: 0.9">
+            STM32 + FreeRTOS 기반 팀 프로젝트
+          </h3>
           <p style="color: #fff; margin-bottom: 30px">
             STM32 기반 FreeRTOS 멀티태스킹으로 모터, 센서, 블루투스 태스크를
             병렬 처리합니다. 초음파 센서 3개를 순차 측정 방식으로 간섭을
             최소화해 장애물 감지 성공률 95%를 달성했습니다.
           </p>
           <ul class="styled-list">
-            <li style="color: #fff">STM32, FreeRTOS, UART, PWM, 초음파센서 3EA, RFID, RGB LED</li>
-            <li style="color: #fff">수동 / 자율주행 모드 전환, RFID 기반 출발</li>
+            <li style="color: #fff">
+              STM32, FreeRTOS, UART, PWM, 초음파센서 3EA, RFID, RGB LED
+            </li>
+            <li style="color: #fff">
+              수동 / 자율주행 모드 전환, RFID 기반 출발
+            </li>
             <li style="color: #fff">PWM 10단계 속도 조절, 부저 상태 표시</li>
           </ul>
           <div class="github-card">
@@ -718,12 +762,24 @@
         </div>
         <div
           class="image-container"
-          style="background: #f7f4ee; display: flex; align-items: center; justify-content: center; padding: 24px;"
+          style="
+            background: #f7f4ee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+          "
         >
           <img
             alt="RC카 자율주행 프로젝트"
             src="rc_car.png"
-            style="object-fit: contain; max-width: 100%; max-height: 672px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);"
+            style="
+              object-fit: contain;
+              max-width: 100%;
+              max-height: 672px;
+              border-radius: 12px;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            "
           />
         </div>
       </div>
@@ -738,16 +794,16 @@
               <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
               <h3>FreeRTOS 태스크 설계</h3>
               <p>
-                모터 제어, 초음파 센서, 블루투스 통신을 3개 태스크로 분리해
-                병렬 처리, FreeRTOS 태스크 구조를 직접 설계 및 구현했습니다.
+                모터 제어, 초음파 센서, 블루투스 통신을 3개 태스크로 분리해 병렬
+                처리, FreeRTOS 태스크 구조를 직접 설계 및 구현했습니다.
               </p>
             </div>
             <div class="icon-tile">
               <div class="icon"><i class="fa-solid fa-route"></i></div>
               <h3>자율주행 구현</h3>
               <p>
-                초음파 센서 3개 간 간섭 문제를 순차 측정 방식으로 해결,
-                장애물 감지 성공률 95% 달성 및 자율주행 완주에 성공했습니다.
+                초음파 센서 3개 간 간섭 문제를 순차 측정 방식으로 해결, 장애물
+                감지 성공률 95% 달성 및 자율주행 완주에 성공했습니다.
               </p>
             </div>
             <div class="icon-tile">
@@ -765,16 +821,25 @@
 
       <!-- SLIDE 7: 굴삭기 소개 -->
       <div class="slide-container bleed-image-layout">
-        <div class="content-container" style="background-color: var(--label-color)">
-          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">원격 굴삭기 프로젝트</h2>
-          <h3 style="color: #fff; opacity: 0.9">Basys3 FPGA 기반 팀 프로젝트</h3>
+        <div
+          class="content-container"
+          style="background-color: var(--label-color)"
+        >
+          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">
+            원격 굴삭기 프로젝트
+          </h2>
+          <h3 style="color: #fff; opacity: 0.9">
+            Basys3 FPGA 기반 팀 프로젝트
+          </h3>
           <p style="color: #fff; margin-bottom: 30px">
             Basys3 FPGA 2대와 HC-05 블루투스 모듈로 무선 통신 기반 원격 조종
-            굴삭기를 구현했습니다. Vivado RTL로 커스텀 IP 5개를 설계하고
-            Vitis 펌웨어와 연동한 SoC 시스템으로 다중 모터를 통합 제어합니다.
+            굴삭기를 구현했습니다. Vivado RTL로 커스텀 IP 5개를 설계하고 Vitis
+            펌웨어와 연동한 SoC 시스템으로 다중 모터를 통합 제어합니다.
           </p>
           <ul class="styled-list">
-            <li style="color: #fff">Basys3 FPGA, Verilog, Vivado, Vitis, UART, PWM</li>
+            <li style="color: #fff">
+              Basys3 FPGA, Verilog, Vivado, Vitis, UART, PWM
+            </li>
             <li style="color: #fff">서보모터 5개, DC 모터 4개 통합 제어</li>
             <li style="color: #fff">조이스틱 기반 무선 원격 제어</li>
           </ul>
@@ -796,12 +861,24 @@
         </div>
         <div
           class="image-container"
-          style="background: #f7f4ee; display: flex; align-items: center; justify-content: center; padding: 24px;"
+          style="
+            background: #f7f4ee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+          "
         >
           <img
             alt="원격 굴삭기 프로젝트"
             src="robo_digger.png"
-            style="object-fit: contain; max-width: 100%; max-height: 672px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);"
+            style="
+              object-fit: contain;
+              max-width: 100%;
+              max-height: 672px;
+              border-radius: 12px;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            "
           />
         </div>
       </div>
@@ -816,8 +893,8 @@
               <div class="icon"><i class="fa-solid fa-signal"></i></div>
               <h3>UART 수신 안정화</h3>
               <p>
-                HC-05 무선 수신 시 노이즈, 누락 문제를 버퍼 저장 후 라인 단위(\n)
-                완전 패킷 확인 파싱 방식으로 해결, 안정적인 무선 제어를
+                HC-05 무선 수신 시 노이즈, 누락 문제를 버퍼 저장 후 라인
+                단위(\n) 완전 패킷 확인 파싱 방식으로 해결, 안정적인 무선 제어를
                 구현했습니다.
               </p>
             </div>
@@ -845,18 +922,29 @@
 
       <!-- SLIDE 9: 스마트홈 소개 -->
       <div class="slide-container bleed-image-layout">
-        <div class="content-container" style="background-color: var(--label-color)">
+        <div
+          class="content-container"
+          style="background-color: var(--label-color)"
+        >
           <h2 style="color: #fff">스마트홈 프로젝트</h2>
-          <h3 style="color: #fff; opacity: 0.9">Basys3 FPGA 기반 팀 프로젝트</h3>
+          <h3 style="color: #fff; opacity: 0.9">
+            Basys3 FPGA 기반 팀 프로젝트
+          </h3>
           <p style="color: #fff; margin-bottom: 30px">
             FPGA로 온습도, 조도, 사운드, 초음파 4종 센서를 실시간 분석해 지능형
             환경을 제공합니다. 모터 제어로 문 개폐 및 태양광 차단, 4x4 키패드
             도어락, I2C LCD 출력을 구현했습니다.
           </p>
           <ul class="styled-list">
-            <li style="color: #fff">Basys3, Verilog, PWM, I2C, DC모터, 서보모터, RGB LED</li>
-            <li style="color: #fff">온습도, 조도, 사운드, 초음파 4종 센서 통합</li>
-            <li style="color: #fff">4x4 키패드 도어락, LCD 상태 표시 인터페이스</li>
+            <li style="color: #fff">
+              Basys3, Verilog, PWM, I2C, DC모터, 서보모터, RGB LED
+            </li>
+            <li style="color: #fff">
+              온습도, 조도, 사운드, 초음파 4종 센서 통합
+            </li>
+            <li style="color: #fff">
+              4x4 키패드 도어락, LCD 상태 표시 인터페이스
+            </li>
           </ul>
           <div class="github-card">
             <div class="qr-side">
@@ -876,12 +964,24 @@
         </div>
         <div
           class="image-container"
-          style="background: #f7f4ee; display: flex; align-items: center; justify-content: center; padding: 24px;"
+          style="
+            background: #f7f4ee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+          "
         >
           <img
             alt="스마트홈 프로젝트"
             src="smart_home.png"
-            style="object-fit: contain; max-width: 100%; max-height: 672px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);"
+            style="
+              object-fit: contain;
+              max-width: 100%;
+              max-height: 672px;
+              border-radius: 12px;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            "
           />
         </div>
       </div>
@@ -901,7 +1001,9 @@
               </p>
             </div>
             <div class="icon-tile">
-              <div class="icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+              <div class="icon">
+                <i class="fa-solid fa-tower-broadcast"></i>
+              </div>
               <h3>다중 센서 통합</h3>
               <p>
                 온습도, 조도, 사운드, 초음파 4종 센서를 단일 FPGA에서 실시간
@@ -923,8 +1025,13 @@
 
       <!-- SLIDE 11: 비상벨 소개 -->
       <div class="slide-container bleed-image-layout">
-        <div class="content-container" style="background-color: var(--label-color)">
-          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">비상벨 음성인식 웹 제어 툴</h2>
+        <div
+          class="content-container"
+          style="background-color: var(--label-color)"
+        >
+          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">
+            비상벨 음성인식 웹 제어 툴
+          </h2>
           <h3 style="color: #fff; opacity: 0.9">
             XVF3800 기반 음성 전처리 파라미터 제어 시스템 (실무)
           </h3>
@@ -934,9 +1041,15 @@
             도구입니다.
           </p>
           <ul class="styled-list">
-            <li style="color: #fff">Next.js, TypeScript, Node.js, Express, WebSocket, UART, I2C</li>
-            <li style="color: #fff">파라미터 Read / Write 제어 및 HEX 프레임 처리</li>
-            <li style="color: #fff">실시간 로그 확인 및 Gain 변화 그래프 시각화</li>
+            <li style="color: #fff">
+              Next.js, TypeScript, Node.js, Express, WebSocket, UART, I2C
+            </li>
+            <li style="color: #fff">
+              파라미터 Read / Write 제어 및 HEX 프레임 처리
+            </li>
+            <li style="color: #fff">
+              실시간 로그 확인 및 Gain 변화 그래프 시각화
+            </li>
           </ul>
           <div class="github-card">
             <div class="qr-side">
@@ -956,12 +1069,24 @@
         </div>
         <div
           class="image-container"
-          style="background: #f7f4ee; display: flex; align-items: center; justify-content: center; padding: 26px;"
+          style="
+            background: #f7f4ee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 26px;
+          "
         >
           <img
             alt="비상벨 웹 제어 툴"
             src="i2c_project_param_crop.png"
-            style="object-fit: contain; max-width: 100%; max-height: 668px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);"
+            style="
+              object-fit: contain;
+              max-width: 100%;
+              max-height: 668px;
+              border-radius: 12px;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            "
           />
         </div>
       </div>
@@ -981,7 +1106,9 @@
               </p>
             </div>
             <div class="icon-tile">
-              <div class="icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+              <div class="icon">
+                <i class="fa-solid fa-plug-circle-bolt"></i>
+              </div>
               <h3>장치 통신 연동</h3>
               <p>
                 Express, WebSocket, SerialPort 기반으로 UART/I2C 제어 흐름을
@@ -999,16 +1126,24 @@
           </div>
         </div>
       </div>
-
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script>
       var qrTargets = [
         { id: "qr-agrodry", url: "https://github.com/alsgudrl132/AGRO_DRY" },
-        { id: "qr-rccar",   url: "https://github.com/alsgudrl132/car-project" },
-        { id: "qr-digger",  url: "https://github.com/alsgudrl132/robo-digger-project" },
-        { id: "qr-smarthome", url: "https://github.com/alsgudrl132/smart-home-project" },
-        { id: "qr-asr",    url: "https://github.com/alsgudrl132/ASR_STM32_WEB_I2C" },
+        { id: "qr-rccar", url: "https://github.com/alsgudrl132/car-project" },
+        {
+          id: "qr-digger",
+          url: "https://github.com/alsgudrl132/robo-digger-project",
+        },
+        {
+          id: "qr-smarthome",
+          url: "https://github.com/alsgudrl132/smart-home-project",
+        },
+        {
+          id: "qr-asr",
+          url: "https://github.com/alsgudrl132/ASR_STM32_WEB_I2C",
+        },
       ];
       qrTargets.forEach(function (t) {
         new QRCode(document.getElementById(t.id), {

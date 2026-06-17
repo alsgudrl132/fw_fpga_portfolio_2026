@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>민형기 포트폴리오</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        background: #263238;
+        font-family: "Nanum Gothic", "Lato", sans-serif;
+      }
+
+      .page-wrapper {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      :root {
+        --primary-bg-color: #f0ede6;
+        --label-color: #7a9e5f;
+        --text-color: #4a4a4a;
+        --title-color: #2c3e50;
+        --subtitle-color: #546e7a;
+        --white: #fff;
+        --highlight-color: #7a9e5f;
+        --tiled-shadow-color: rgba(0, 0, 0, 0.05);
+        --list-icon-color: #7a9e5f;
+        --icon-bg-color: #f1f8e9;
+        --border-color: #eceff1;
+        --overlay-bg-color-2: rgba(240, 237, 230, 0.95);
+      }
+
+      .slide-container {
+        background-color: var(--primary-bg-color);
+        display: flex;
+        flex-direction: column;
+        min-height: 720px;
+        justify-content: center;
+        padding: 60px;
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Nanum Gothic", serif;
+        color: var(--title-color);
+      }
+      h1 {
+        font-size: clamp(36px, 6vw, 80px);
+        line-height: 1.1;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: clamp(26px, 4.5vw, 56px);
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
+      h3 {
+        font-size: clamp(18px, 2.2vw, 28px);
+        color: var(--label-color);
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+      p,
+      li {
+        font-family: "Nanum Gothic", sans-serif;
+        color: var(--text-color);
+        font-size: clamp(15px, 1.6vw, 20px);
+        line-height: 1.6;
+      }
+
+      .subtitle {
+        font-size: clamp(16px, 2vw, 24px);
+        color: var(--subtitle-color);
+        margin-top: 20px;
+        font-weight: 300;
+      }
+      .content-area {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+        width: 100%;
+      }
+      .slide-title {
+        width: 100%;
+        text-align: left;
+      }
+
+      .full-bg-image {
+        background-size: cover;
+        background-position: center;
+      }
+      .full-bg-image .content-overlay {
+        background: var(--overlay-bg-color-2);
+        padding: 40px 60px;
+        border-radius: 12px;
+        max-width: 800px;
+        border-left: 10px solid var(--label-color);
+      }
+
+      .slide-container.bleed-image-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        min-height: 720px;
+      }
+      .slide-container.bleed-image-layout > .content-container {
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+      }
+      .slide-container.bleed-image-layout > .image-container {
+        min-height: 400px;
+      }
+      .bleed-image-side {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .tiled-text-icons {
+        display: flex;
+        gap: 30px;
+        width: 100%;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+      .icon-tile {
+        flex: 1;
+        min-width: 200px;
+        background: #fff;
+        border-radius: 24px;
+        padding: 30px;
+        text-align: center;
+        border-bottom: 8px solid var(--label-color);
+        box-shadow: 0 4px 6px var(--tiled-shadow-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .icon-tile .icon {
+        font-size: 50px;
+        color: var(--highlight-color);
+        margin-bottom: 20px;
+        background: var(--icon-bg-color);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+
+      ul.styled-list {
+        list-style: none;
+        padding: 0;
+      }
+      ul.styled-list li {
+        margin-bottom: 15px;
+        padding-left: 30px;
+        position: relative;
+      }
+      ul.styled-list li::before {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: var(--list-icon-color);
+        position: absolute;
+        left: 0;
+        top: 2px;
+      }
+
+      .slide-divider {
+        width: 100%;
+        height: 6px;
+        background: #263238;
+      }
+
+      /* ===== SLIDE 2 전용 ===== */
+      .s2-wrap {
+        width: 100%;
+        min-height: 720px;
+        background: #f7f5f0;
+        display: grid;
+        grid-template-columns: minmax(280px, 395px) 1fr;
+      }
+      .s2-left {
+        background: #a6c67d;
+        border-bottom-right-radius: 56px;
+        padding: 42px 36px 28px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .s2-name {
+        width: 100%;
+        font-size: clamp(28px, 3.3vw, 42px);
+        font-weight: 400;
+        line-height: 1.15;
+        color: #fff;
+        margin-top: 8px;
+        margin-bottom: 18px;
+        letter-spacing: -0.03em;
+      }
+      .s2-job {
+        width: 100%;
+        font-size: clamp(15px, 1.6vw, 20px);
+        color: #fff5c8;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .s2-photo {
+        width: 220px;
+        height: 290px;
+        background: #e9ecef;
+        overflow: hidden;
+        margin-bottom: auto;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+      }
+      .s2-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .s2-contact {
+        width: 100%;
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.55;
+        color: #fff;
+      }
+      .s2-contact .row {
+        display: grid;
+        grid-template-columns: 94px 1fr;
+        gap: 10px;
+        align-items: start;
+      }
+      .s2-contact .lbl {
+        font-weight: 800;
+        color: #fff8cf;
+        font-size: 14px;
+      }
+      .s2-contact a {
+        color: #d0eaff;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .s2-contact span {
+        font-size: 14px;
+      }
+      .s2-right {
+        padding: 44px 48px 28px 40px;
+        color: #5b5b5b;
+      }
+      .s2-intro {
+        display: grid;
+        grid-template-columns: 210px 1fr;
+        gap: 28px;
+        align-items: start;
+        margin-bottom: 34px;
+      }
+      .s2-q {
+        color: #95b86b;
+        font-size: clamp(18px, 2vw, 24px);
+        font-weight: 800;
+        line-height: 1.35;
+      }
+      .s2-a {
+        font-size: clamp(16px, 1.8vw, 22px);
+        line-height: 1.6;
+        color: #8a8a8a;
+        padding-top: 4px;
+      }
+      .s2-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 42px 56px;
+      }
+      .s2-section h3 {
+        margin: 0 0 10px;
+        color: #95b86b;
+        font-size: clamp(18px, 2vw, 24px);
+        font-weight: 800;
+      }
+      .s2-line {
+        width: 100%;
+        height: 1px;
+        background: #d7decf;
+        margin-bottom: 18px;
+      }
+      .s2-item {
+        display: grid;
+        grid-template-columns: 148px 1fr;
+        gap: 10px;
+        margin-bottom: 12px;
+        align-items: start;
+      }
+      .s2-period {
+        color: #a6c67d;
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+      .s2-desc {
+        color: #5f5f5f;
+        font-size: 15px;
+        line-height: 1.62;
+        white-space: pre-line;
+      }
+
+      .github-card {
+        display: inline-flex;
+        margin-top: 24px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        width: fit-content;
+      }
+      .github-card .qr-side {
+        background: #fff;
+        padding: 10px 10px 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+      .github-card .qr-side span {
+        font-size: 10px;
+        color: #777;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+      .github-card .link-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 16px 22px;
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        transition: background 0.2s;
+      }
+      .github-card .link-side:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+      .github-card .link-side i {
+        font-size: 30px;
+      }
+
+      @media (max-width: 1024px) {
+        .slide-container {
+          padding: 48px 40px;
+          min-height: auto;
+        }
+        .slide-container.bleed-image-layout > .content-container {
+          padding: 48px 40px;
+        }
+        .s2-right {
+          padding: 32px 32px 24px 28px;
+        }
+        .s2-grid {
+          gap: 28px 36px;
+        }
+        .s2-intro {
+          grid-template-columns: 170px 1fr;
+          gap: 20px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .slide-container {
+          padding: 36px 20px;
+          min-height: auto;
+        }
+        .full-bg-image .content-overlay {
+          padding: 28px 24px;
+          border-left-width: 6px;
+        }
+        .slide-container.bleed-image-layout {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+        .slide-container.bleed-image-layout > .content-container {
+          padding: 36px 24px;
+          height: auto;
+        }
+        .slide-container.bleed-image-layout > .image-container {
+          min-height: 240px;
+          max-height: 300px;
+          overflow: hidden;
+        }
+        .tiled-text-icons {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .icon-tile {
+          min-width: unset;
+        }
+        .s2-wrap {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+        .s2-left {
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+          padding: 32px 24px 24px;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 20px;
+          align-items: flex-start;
+        }
+        .s2-name {
+          width: 100%;
+          font-size: 28px;
+          margin-bottom: 0;
+          white-space: normal;
+        }
+        .s2-job {
+          width: auto;
+          margin-bottom: 0;
+          text-align: left;
+        }
+        .s2-photo {
+          width: 130px;
+          height: 170px;
+          flex-shrink: 0;
+          margin-bottom: 0;
+        }
+        .s2-contact {
+          flex: 1;
+          min-width: 180px;
+          margin-top: 0;
+        }
+        .s2-right {
+          padding: 28px 20px;
+        }
+        .s2-intro {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin-bottom: 24px;
+        }
+        .s2-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        .s2-item {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .slide-container {
+          padding: 28px 16px;
+        }
+        .s2-left {
+          flex-direction: column;
+          align-items: center;
+          padding: 28px 16px;
+        }
+        .s2-photo {
+          width: 160px;
+          height: 210px;
+        }
+        .s2-contact {
+          width: 100%;
+          min-width: unset;
+        }
+        .icon-tile {
+          padding: 24px 20px;
+        }
+        .icon-tile .icon {
+          width: 80px;
+          height: 80px;
+          font-size: 38px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <!-- SLIDE 1: 커버 -->
+      <div
+        class="slide-container full-bg-image"
+        style="background-image: url(&quot;https://picture-search.skywork.ai/aippt/image/sheet/aaf2ae8e502d9f0ede20d9d91285fd74_zimage.jpg&quot;);"
+      >
+        <div class="content-overlay">
+          <h1>민형기 포트폴리오</h1>
+          <p class="subtitle">펌웨어 / FPGA 개발자 | Min Hyeong-Gi</p>
+          <p style="margin-top: 20px; font-weight: 700; color: var(--label-color);">
+            alsgudrl132@gmail.com | 010-3020-9437
+          </p>
+        </div>
+      </div>
+      <div class="slide-divider"></div>
+
+      <!-- SLIDE 2: 프로필 -->
+      <div class="s2-wrap">
+        <div class="s2-left">
+          <div class="s2-name">Min Hyeong Gi</div>
+          <div class="s2-job">펌웨어 / FPGA 개발자 ㅣ 민형기</div>
+          <div class="s2-photo"><img src="min.png" alt="프로필 사진" /></div>
+          <div class="s2-contact">
+            <div class="row">
+              <div class="lbl">Birth.</div>
+              <span>1997.02.14</span>
+            </div>
+            <div class="row">
+              <div class="lbl">E-mail.</div>
+              <span>alsgudrl132@gmail.com</span>
+            </div>
+            <div class="row">
+              <div class="lbl">Tel.</div>
+              <span>010-3020-9437</span>
+            </div>
+            <div class="row">
+              <div class="lbl">Git</div>
+              <a href="https://github.com/alsgudrl132">github.com/alsgudrl132</a>
+            </div>
+          </div>
+        </div>
+        <div class="s2-right">
+          <div class="s2-intro">
+            <div class="s2-q">나를 한 마디로<br />표현한다면 ?</div>
+            <div class="s2-a">
+              칩과 소프트웨어 사이, 펌웨어 레이어에서 실제 동작을 만드는
+              개발자입니다.
+            </div>
+          </div>
+          <div class="s2-grid">
+            <div class="s2-section">
+              <h3>학력사항</h3>
+              <div class="s2-line"></div>
+              <div class="s2-item">
+                <div class="s2-period">2013.03~2016.02</div>
+                <div class="s2-desc">세경 고등학교 디지털 정보전자과 졸업</div>
+              </div>
+              <div class="s2-item">
+                <div class="s2-period">2020.03~2025.08</div>
+                <div class="s2-desc">학점은행제 컴퓨터공학과 졸업</div>
+              </div>
+            </div>
+            <div class="s2-section">
+              <h3>경력사항</h3>
+              <div class="s2-line"></div>
+              <div class="s2-item">
+                <div class="s2-period">2024.08~2024.12</div>
+                <div class="s2-desc">EBS 온라인클래스 프론트엔드 유지보수 (프리랜서)</div>
+              </div>
+              <div class="s2-item">
+                <div class="s2-period">2025.10~2026.03</div>
+                <div class="s2-desc">디앤샤인 비상벨 음성인식 웹 제어 도구 개발 - Next.js + Node.js + Express 기반 - STM32C0 기반 펌웨어 개발 병행 - 하드웨어 개발자와 협업 진행</div>
+              </div>
+            </div>
+            <div class="s2-section">
+              <h3>수료과정</h3>
+              <div class="s2-line"></div>
+              <div class="s2-item">
+                <div class="s2-period">2023.03~2023.09</div>
+                <div class="s2-desc">자바 풀스택 &amp; 빅데이터 융합 개발자</div>
+              </div>
+              <div class="s2-item">
+                <div class="s2-period">2025.05~2025.10</div>
+                <div class="s2-desc">세미콘 설계 / 검증 아카데미</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-divider"></div>
+
+      <!-- SLIDE 3: AGRO_DRY 소개 -->
+      <div class="slide-container bleed-image-layout">
+        <div class="content-container" style="background-color: var(--label-color)">
+          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">AGRO_DRY</h2>
+          <h3 style="color: #fff; opacity: 0.9">STM32 기반 환경 제어 시스템 (개인)</h3>
+          <p style="color: #fff; margin-bottom: 30px">
+            가금류 육추기(Poultry Brooder)용 임베디드 온도, 습도 자동 제어
+            시스템입니다. STM32F411RE Nucleo 보드로 DHT22 센서를 읽고 릴레이로
+            열원을 ON/OFF 제어하며, LCD와 버튼으로 현장에서 직접 운용합니다.
+            실제 가금류(병아리) 사육에 투입해 운용 중입니다.
+          </p>
+          <ul class="styled-list">
+            <li style="color: #fff">STM32F411RE, C (HAL), I2C, IWDG</li>
+            <li style="color: #fff">DHT22 온습도 센서 + 릴레이 제어</li>
+            <li style="color: #fff">16×2 LCD 상태 표시, 버튼 UI로 목표 온도 설정</li>
+          </ul>
+          <div class="github-card">
+            <div class="qr-side">
+              <div id="qr-agrodry"></div>
+              <span>QR 스캔</span>
+            </div>
+            <a
+              class="link-side"
+              href="https://github.com/alsgudrl132/AGRO_DRY"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+              GitHub 보기
+            </a>
+          </div>
+        </div>
+        <div
+          class="image-container"
+          style="background: #f7f4ee; display: grid; grid-template-rows: 1fr 1fr; gap: 0;"
+        >
+          <img
+            alt="가금류 육추기 운용 중"
+            src="agro_dry2.jpeg"
+            style="width: 100%; height: 100%; object-fit: cover; display: block"
+          />
+          <img
+            alt="LCD 동작 화면 — T:33.0C HEAT:ON"
+            src="agro_dry1.jpeg"
+            style="width: 100%; height: 100%; object-fit: cover; display: block"
+          />
+        </div>
+      </div>
+      <div class="slide-divider"></div>
+
+      <!-- SLIDE 4: AGRO_DRY 상세 -->
+      <div class="slide-container">
+        <h2 class="slide-title">AGRO_DRY: 상세 구현</h2>
+        <div class="content-area">
+          <div class="tiled-text-icons">
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-temperature-half"></i></div>
+              <h3>온도 제어 로직</h3>
+              <p>
+                DHT22로 온습도 실시간 측정. 히스테리시스 방식으로 목표 온도 ±2°C
+                기준 릴레이 ON/OFF 제어 — 과잉 반복 방지.
+              </p>
+            </div>
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h3>안전 로직</h3>
+              <p>
+                센서 오류 즉시 릴레이 OFF, 5회 연속 오류 영구 잠금. 75°C 과열
+                리밋, IWDG 와치독(4초), 부팅 시 릴레이 OFF 확정.
+              </p>
+            </div>
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-seedling"></i></div>
+              <h3>실 배포</h3>
+              <p>
+                가금류(병아리) 육추기로 실제 투입해 운용 중. 설정값만 조정해
+                다양한 축산 환경에 적용 가능한 구조로 설계.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-divider"></div>
+
+      <!-- SLIDE 5: RC카 소개 -->
+      <div class="slide-container bleed-image-layout">
+        <div class="content-container" style="background-color: var(--label-color)">
+          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">RC카 자율주행 프로젝트</h2>
+          <h3 style="color: #fff; opacity: 0.9">STM32 + FreeRTOS 기반 팀 프로젝트</h3>
+          <p style="color: #fff; margin-bottom: 30px">
+            STM32 기반 FreeRTOS 멀티태스킹으로 모터, 센서, 블루투스 태스크를
+            병렬 처리합니다. 초음파 센서 3개를 순차 측정 방식으로 간섭을
+            최소화해 장애물 감지 성공률 95%를 달성했습니다.
+          </p>
+          <ul class="styled-list">
+            <li style="color: #fff">STM32, FreeRTOS, UART, PWM, 초음파센서 3EA, RFID, RGB LED</li>
+            <li style="color: #fff">수동 / 자율주행 모드 전환, RFID 기반 출발</li>
+            <li style="color: #fff">PWM 10단계 속도 조절, 부저 상태 표시</li>
+          </ul>
+          <div class="github-card">
+            <div class="qr-side">
+              <div id="qr-rccar"></div>
+              <span>QR 스캔</span>
+            </div>
+            <a
+              class="link-side"
+              href="https://github.com/alsgudrl132/car-project"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+              GitHub 보기
+            </a>
+          </div>
+        </div>
+        <div
+          class="image-container"
+          style="background: #f7f4ee; display: flex; align-items: center; justify-content: center; padding: 24px;"
+        >
+          <img
+            alt="RC카 자율주행 프로젝트"
+            src="rc_car.png"
+            style="object-fit: contain; max-width: 100%; max-height: 672px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);"
+          />
+        </div>
+      </div>
+      <div class="slide-divider"></div>
+
+      <!-- SLIDE 6: RC카 상세 -->
+      <div class="slide-container">
+        <h2 class="slide-title">RC카 자율주행: 상세 기여</h2>
+        <div class="content-area">
+          <div class="tiled-text-icons">
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+              <h3>FreeRTOS 태스크 설계</h3>
+              <p>
+                모터 제어, 초음파 센서, 블루투스 통신을 3개 태스크로 분리해
+                병렬 처리, FreeRTOS 태스크 구조를 직접 설계 및 구현했습니다.
+              </p>
+            </div>
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-route"></i></div>
+              <h3>자율주행 구현</h3>
+              <p>
+                초음파 센서 3개 간 간섭 문제를 순차 측정 방식으로 해결,
+                장애물 감지 성공률 95% 달성 및 자율주행 완주에 성공했습니다.
+              </p>
+            </div>
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-sliders"></i></div>
+              <h3>시스템 통합 & 검증</h3>
+              <p>
+                UART 블루투스 수동 제어, PWM 모터 정밀 조정, RFID 출발 기능까지
+                전체 시스템 통합 테스트 및 성능 검증을 담당했습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-divider"></div>
+
+      <!-- SLIDE 7: 굴삭기 소개 -->
+      <div class="slide-container bleed-image-layout">
+        <div class="content-container" style="background-color: var(--label-color)">
+          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">원격 굴삭기 프로젝트</h2>
+          <h3 style="color: #fff; opacity: 0.9">Basys3 FPGA 기반 팀 프로젝트</h3>
+          <p style="color: #fff; margin-bottom: 30px">
+            Basys3 FPGA 2대와 HC-05 블루투스 모듈로 무선 통신 기반 원격 조종
+            굴삭기를 구현했습니다. Vivado RTL로 커스텀 IP 5개를 설계하고
+            Vitis 펌웨어와 연동한 SoC 시스템으로 다중 모터를 통합 제어합니다.
+          </p>
+          <ul class="styled-list">
+            <li style="color: #fff">Basys3 FPGA, Verilog, Vivado, Vitis, UART, PWM</li>
+            <li style="color: #fff">서보모터 5개, DC 모터 4개 통합 제어</li>
+            <li style="color: #fff">조이스틱 기반 무선 원격 제어</li>
+          </ul>
+          <div class="github-card">
+            <div class="qr-side">
+              <div id="qr-digger"></div>
+              <span>QR 스캔</span>
+            </div>
+            <a
+              class="link-side"
+              href="https://github.com/alsgudrl132/robo-digger-project"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+              GitHub 보기
+            </a>
+          </div>
+        </div>
+        <div
+          class="image-container"
+          style="background: #f7f4ee; display: flex; align-items: center; justify-content: center; padding: 24px;"
+        >
+          <img
+            alt="원격 굴삭기 프로젝트"
+            src="robo_digger.png"
+            style="object-fit: contain; max-width: 100%; max-height: 672px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);"
+          />
+        </div>
+      </div>
+      <div class="slide-divider"></div>
+
+      <!-- SLIDE 8: 굴삭기 상세 -->
+      <div class="slide-container">
+        <h2 class="slide-title">원격 굴삭기 프로젝트: 상세 기여</h2>
+        <div class="content-area">
+          <div class="tiled-text-icons">
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-signal"></i></div>
+              <h3>UART 수신 안정화</h3>
+              <p>
+                HC-05 무선 수신 시 노이즈, 누락 문제를 버퍼 저장 후 라인 단위(\n)
+                완전 패킷 확인 파싱 방식으로 해결, 안정적인 무선 제어를
+                구현했습니다.
+              </p>
+            </div>
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+              <h3>SoC 기반 다중 모터 제어</h3>
+              <p>
+                Vivado RTL로 커스텀 IP 5개(ADC, PWM, UART, LCD, GPIO)를 설계하고
+                Vitis 펌웨어와 연동, 서보모터 5개, DC모터 4개를 통합 제어하는
+                SoC 시스템을 구현했습니다.
+              </p>
+            </div>
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-gears"></i></div>
+              <h3>본인 기여 범위</h3>
+              <p>
+                HC-05 MASTER–SLAVE 페어링, UART 수신 데이터 파싱, 서보모터 및
+                DC모터 제어를 담당했습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-divider"></div>
+
+      <!-- SLIDE 9: 스마트홈 소개 -->
+      <div class="slide-container bleed-image-layout">
+        <div class="content-container" style="background-color: var(--label-color)">
+          <h2 style="color: #fff">스마트홈 프로젝트</h2>
+          <h3 style="color: #fff; opacity: 0.9">Basys3 FPGA 기반 팀 프로젝트</h3>
+          <p style="color: #fff; margin-bottom: 30px">
+            FPGA로 온습도, 조도, 사운드, 초음파 4종 센서를 실시간 분석해 지능형
+            환경을 제공합니다. 모터 제어로 문 개폐 및 태양광 차단, 4x4 키패드
+            도어락, I2C LCD 출력을 구현했습니다.
+          </p>
+          <ul class="styled-list">
+            <li style="color: #fff">Basys3, Verilog, PWM, I2C, DC모터, 서보모터, RGB LED</li>
+            <li style="color: #fff">온습도, 조도, 사운드, 초음파 4종 센서 통합</li>
+            <li style="color: #fff">4x4 키패드 도어락, LCD 상태 표시 인터페이스</li>
+          </ul>
+          <div class="github-card">
+            <div class="qr-side">
+              <div id="qr-smarthome"></div>
+              <span>QR 스캔</span>
+            </div>
+            <a
+              class="link-side"
+              href="https://github.com/alsgudrl132/smart-home-project"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+              GitHub 보기
+            </a>
+          </div>
+        </div>
+        <div
+          class="image-container"
+          style="background: #f7f4ee; display: flex; align-items: center; justify-content: center; padding: 24px;"
+        >
+          <img
+            alt="스마트홈 프로젝트"
+            src="smart_home.png"
+            style="object-fit: contain; max-width: 100%; max-height: 672px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);"
+          />
+        </div>
+      </div>
+      <div class="slide-divider"></div>
+
+      <!-- SLIDE 10: 스마트홈 상세 -->
+      <div class="slide-container">
+        <h2 class="slide-title">스마트홈: 상세 기여</h2>
+        <div class="content-area">
+          <div class="tiled-text-icons">
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+              <h3>모터 제어 모듈 설계</h3>
+              <p>
+                DC모터 및 서보모터 제어 모듈을 직접 설계, 구현하고, 센서 데이터
+                기반 자동제어 시스템을 구축했습니다.
+              </p>
+            </div>
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+              <h3>다중 센서 통합</h3>
+              <p>
+                온습도, 조도, 사운드, 초음파 4종 센서를 단일 FPGA에서 실시간
+                분석해 환경 변화에 따른 자동 제어 흐름을 구현했습니다.
+              </p>
+            </div>
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+              <h3>모듈 통합 작업</h3>
+              <p>
+                팀원 코드를 병합하고 모듈 간 통합 테스트를 담당, 각 컨트롤러와
+                주변장치가 충돌 없이 동작하도록 완성도를 높였습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-divider"></div>
+
+      <!-- SLIDE 11: 비상벨 소개 -->
+      <div class="slide-container bleed-image-layout">
+        <div class="content-container" style="background-color: var(--label-color)">
+          <h2 style="color: #fff; font-size: 44px; white-space: nowrap">비상벨 음성인식 웹 제어 툴</h2>
+          <h3 style="color: #fff; opacity: 0.9">
+            XVF3800 기반 음성 전처리 파라미터 제어 시스템 (실무)
+          </h3>
+          <p style="color: #fff; margin-bottom: 26px">
+            비상벨 제품에 적용되는 음성인식 기능의 성능 조정을 위해, XVF3800
+            칩의 음성 전처리 파라미터를 읽고 쓰기 쉽게 만든 웹 기반 제어
+            도구입니다.
+          </p>
+          <ul class="styled-list">
+            <li style="color: #fff">Next.js, TypeScript, Node.js, Express, WebSocket, UART, I2C</li>
+            <li style="color: #fff">파라미터 Read / Write 제어 및 HEX 프레임 처리</li>
+            <li style="color: #fff">실시간 로그 확인 및 Gain 변화 그래프 시각화</li>
+          </ul>
+          <div class="github-card">
+            <div class="qr-side">
+              <div id="qr-asr"></div>
+              <span>QR 스캔</span>
+            </div>
+            <a
+              class="link-side"
+              href="https://github.com/alsgudrl132/ASR_STM32_WEB_I2C"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+              GitHub 보기
+            </a>
+          </div>
+        </div>
+        <div
+          class="image-container"
+          style="background: #f7f4ee; display: flex; align-items: center; justify-content: center; padding: 26px;"
+        >
+          <img
+            alt="비상벨 웹 제어 툴"
+            src="i2c_project_param_crop.png"
+            style="object-fit: contain; max-width: 100%; max-height: 668px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);"
+          />
+        </div>
+      </div>
+      <div class="slide-divider"></div>
+
+      <!-- SLIDE 12: 비상벨 상세 -->
+      <div class="slide-container">
+        <h2 class="slide-title">비상벨 웹 제어 툴: 상세 기여</h2>
+        <div class="content-area">
+          <div class="tiled-text-icons">
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-sliders"></i></div>
+              <h3>파라미터 제어 UI</h3>
+              <p>
+                마이크 게인, 노이즈 제어, AEC 관련 항목 등 다수의 파라미터를
+                읽고 쓰기 쉽게 웹 UI로 구조화했습니다.
+              </p>
+            </div>
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+              <h3>장치 통신 연동</h3>
+              <p>
+                Express, WebSocket, SerialPort 기반으로 UART/I2C 제어 흐름을
+                연결하고, HEX 프레임 생성, 전송, 응답 파싱 로직을 구현했습니다.
+              </p>
+            </div>
+            <div class="icon-tile">
+              <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+              <h3>실시간 모니터링</h3>
+              <p>
+                Gain 변화 상태를 그래프로 시각화하고 로그 패널을 함께 구성해,
+                현장에서 튜닝 결과를 바로 확인할 수 있도록 했습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+      var qrTargets = [
+        { id: "qr-agrodry", url: "https://github.com/alsgudrl132/AGRO_DRY" },
+        { id: "qr-rccar",   url: "https://github.com/alsgudrl132/car-project" },
+        { id: "qr-digger",  url: "https://github.com/alsgudrl132/robo-digger-project" },
+        { id: "qr-smarthome", url: "https://github.com/alsgudrl132/smart-home-project" },
+        { id: "qr-asr",    url: "https://github.com/alsgudrl132/ASR_STM32_WEB_I2C" },
+      ];
+      qrTargets.forEach(function (t) {
+        new QRCode(document.getElementById(t.id), {
+          text: t.url,
+          width: 90,
+          height: 90,
+          colorDark: "#263238",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.M,
+        });
+      });
+    </script>
+  </body>
+</html>

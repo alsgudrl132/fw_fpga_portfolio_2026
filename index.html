@@ -406,6 +406,7 @@
         .full-bg-image .content-overlay {
           padding: 28px 24px;
           border-left-width: 6px;
+          max-width: 100%;
         }
         .slide-container.bleed-image-layout {
           grid-template-columns: 1fr;
@@ -415,9 +416,15 @@
           padding: 36px 24px;
           height: auto;
         }
+        /* 인라인 white-space:nowrap / font-size:44px 강제 override */
+        .slide-container.bleed-image-layout .content-container h2 {
+          font-size: clamp(22px, 5.5vw, 34px) !important;
+          white-space: normal !important;
+          word-break: keep-all;
+        }
         .slide-container.bleed-image-layout > .image-container {
-          min-height: 240px;
-          max-height: 300px;
+          min-height: 220px;
+          max-height: 280px;
           overflow: hidden;
         }
         .tiled-text-icons {
@@ -426,6 +433,14 @@
         }
         .icon-tile {
           min-width: unset;
+        }
+        /* github-card 모바일 대응 */
+        .github-card {
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .github-card .link-side {
+          flex: 1;
         }
         .s2-wrap {
           grid-template-columns: 1fr;
@@ -459,8 +474,12 @@
         }
         .s2-contact {
           flex: 1;
-          min-width: 180px;
+          min-width: 160px;
           margin-top: 0;
+          font-size: 13px;
+        }
+        .s2-contact .row {
+          grid-template-columns: 76px 1fr;
         }
         .s2-right {
           padding: 28px 20px;
@@ -478,11 +497,24 @@
           grid-template-columns: 1fr;
           gap: 4px;
         }
+        h2 {
+          margin-bottom: 16px;
+          word-break: keep-all;
+        }
+        p, li {
+          font-size: 15px !important;
+        }
       }
 
       @media (max-width: 480px) {
         .slide-container {
           padding: 28px 16px;
+        }
+        .slide-container.bleed-image-layout .content-container h2 {
+          font-size: 22px !important;
+        }
+        .full-bg-image .content-overlay {
+          padding: 24px 18px;
         }
         .s2-left {
           flex-direction: column;
@@ -490,20 +522,31 @@
           padding: 28px 16px;
         }
         .s2-photo {
-          width: 160px;
-          height: 210px;
+          width: 150px;
+          height: 195px;
         }
         .s2-contact {
           width: 100%;
           min-width: unset;
         }
+        .s2-contact .row {
+          grid-template-columns: 70px 1fr;
+          gap: 6px;
+        }
         .icon-tile {
           padding: 24px 20px;
         }
         .icon-tile .icon {
-          width: 80px;
-          height: 80px;
-          font-size: 38px;
+          width: 72px;
+          height: 72px;
+          font-size: 34px;
+        }
+        .github-card .qr-side {
+          padding: 8px 8px 4px;
+        }
+        ul.styled-list li {
+          font-size: 14px;
+          margin-bottom: 10px;
         }
       }
     </style>
